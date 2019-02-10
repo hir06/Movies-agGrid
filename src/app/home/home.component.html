@@ -1,0 +1,25 @@
+<div [ngrxView]="dataState" class="full-height">
+  <div *ngrxViewResolving>
+    resolving
+  </div>
+  <div *ngrxViewResolved class="parent full-height">
+    <div class="home full-height">
+    <div class="grid full-height p-1">
+          <ag-grid-angular 
+          [enableSorting]="true"
+          autoHeight=true 
+          #grid
+          [rowHeight]= 50
+          [paginationPageSize] = "10"
+          [pagination]="true"
+          [enableFilter]="true"
+          class="full-height"
+          [ngClass] = "gridTheme"
+          [rowData]="rowData" 
+          [columnDefs]="columnDefs">
+      </ag-grid-angular> 
+
+ 
+      </div>
+    </div> 
+  </div>
